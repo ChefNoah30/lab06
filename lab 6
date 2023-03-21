@@ -1,25 +1,9 @@
 print("Menu\n---------\n1. Encode\n2. Decode\n3. Quit\n")
 
-# Runs menu while user does not opt to quit
 while True:
     # Prompts user for input
     option = int(input("Please enter an option: "))
 
-    # Encoder
-    if option == 1:
-        user_input = input("Enter your password to encode: ")
-        encoded_password = ""
-
-        # Iterates through each character of user input
-        for i in user_input:
-            # Adds 3 to user input, if i + 3 > 10, use modulus
-            if int(i) < 7:
-                encoded_password += str(int(i)+3)
-            if int(i) >= 7:
-                encoded_password += str((int(i)+3)%10)
-
-        # Return encoded password
-        print("Your password has been encoded and stored!\n")
 
     # Decoder
     decoded_password = ""
