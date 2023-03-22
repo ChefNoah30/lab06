@@ -20,6 +20,17 @@ while True:
              # Return encoded password
              print("Your password has been encoded and stored!\n")
 
+    # Decoder
+    decoded_password = ""
+    # Iterates through each character of user input
+    for i in encoded_password:
+    # Subtracts 3 to decoded_password, if i + 3 > 10
+        if int(i) < 7:
+            decoded_password += str((int(i)-3)%10)
+        if int(i) >= 7:
+            decoded_password += str((int(i)-3))
+    print("The encoded password is",(encoded_password + ","),"and the original password is", decoded_password,".")
+    encoded_password = "" # Reset the encoded_password variable
 
     # Quits the program
     if option == 3:
